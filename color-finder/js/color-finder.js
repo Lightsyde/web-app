@@ -11,7 +11,7 @@ $(document).ready(function() {
 		var changetoHSL = $.farbtastic('#colorpicker').hsl;
 		var hue = changetoHSL[0];
 		var compliment = 0;
-		var supplement = 0;
+		
 		
 		if (hue < .5) {
 			compliment = hue + .5;
