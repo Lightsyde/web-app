@@ -29,12 +29,28 @@ $(document).ready(function() {
 		//var trueHexc = hsl[2]	
 		
 		
-		//var trueHex = $.colors( 'hsl(hsl[0],hsl[1] + '%',hsl[2] + '%')' );//.toString('hex');
+		//var trueHex = $.colors( 'hsl(hsl[0],hsl[1] + '%',hsl[2] + '%')' ).toString('hex');
 		//$('#complimentary').val(trueHex);
 		//console.log(trueHex);
 		
+		
+		
 		console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#compliment').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
+		
+		
+		var utterComHex = $('#compliment').css('background-color').toString('hex');
+		$('#complimentary').val(utterComHex);
+		//var utterComHex = $('#compliment').val('hex');
+		//$('#complimentary').val(utterComHex); // find a way to link this...
+		console.log (utterComHex);
+		
+		//var utterComHex = $.farbtastic('#colorpicker').$.farbtastic('#compliment',trueHex);
+		
+		//var utterComHex = $('#compliment').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
+		//console.log(utterComHex);
+		//$('#complimentary').val(utterComHex.color);
+		
 		
 		/*var hexCom = [
 			hsl[0] / 360
@@ -74,6 +90,9 @@ $(document).ready(function() {
 		//console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#suppliment1').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
+		var utterSupHex = $('#suppliment1').css('background-color').toString('hex');
+		$('#supplimentary1').val(utterSupHex);
+		
 		
 		//Supplementary two
 		if (hue < .5) {
@@ -90,6 +109,9 @@ $(document).ready(function() {
 				
 		//console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#suppliment2').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
+		
+		var utterSup2Hex = $('#suppliment2').css('background-color').toString('hex');
+		$('#supplimentary2').val(utterSup2Hex);
 		
 	});
 });
