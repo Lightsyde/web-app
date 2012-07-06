@@ -34,7 +34,15 @@ $(document).ready(function() {
 			,hsl[2] / 100
 		
 		]
-		var trueHex = $.colors( 'hsla(hsl[0],hsl[1],hsl[2],1)' ).toString('hex');
+		var trueHexa = hsl[0] 
+		var trueHexb = hsl[1]
+		var trueHexc = hsl[2]
+		console.log(trueHexb);
+		
+		//$.farbtastic('#colorpicker')$.farbtastic('#complimentary',trueHex);
+		
+		var trueHex = $.colors( 'hsla(98,trueHexb + '%',trueHexc + '%',0.4)' ).toString('hex');
+		$('#complimentary').val(trueHex);
 		console.log(trueHex);
 		console.log('hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2] + ')');
 		//'hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2])');
