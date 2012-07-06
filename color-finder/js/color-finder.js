@@ -24,28 +24,32 @@ $(document).ready(function() {
 			, Math.round(changetoHSL[1] * 100)
 			, Math.round(changetoHSL[2] * 100)
 		]
-				
+		//var trueHexa = hsl[0] 
+		//var trueHexb = hsl[1]
+		//var trueHexc = hsl[2]	
+		
+		
+		//var trueHex = $.colors( 'hsl(hsl[0],hsl[1] + '%',hsl[2] + '%')' );//.toString('hex');
+		//$('#complimentary').val(trueHex);
+		//console.log(trueHex);
 		
 		console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#compliment').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
-		var hexCom = [
+		/*var hexCom = [
 			hsl[0] / 360
 			,hsl[1] / 100
 			,hsl[2] / 100
 		
-		]
-		var trueHexa = hsl[0] 
-		var trueHexb = hsl[1]
-		var trueHexc = hsl[2]
+		]*/
+		
 		//console.log(trueHexb);
 		
 		//$.farbtastic('#colorpicker')$.farbtastic('#complimentary',trueHex);
 		
-		var trueHex = $.colors( 'hsla((trueHexa / 3.6),trueHexb + '%',trueHexc + '%',1)' ).toString('hex');
-		$('#complimentary').val(trueHex);
-		console.log(trueHex);
-		console.log('hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2] + ')');
+		
+		
+		//console.log('hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2] + ')');
 		//'hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2])');
 		
 		//var changetoComHEX = hsL.color;
@@ -67,7 +71,7 @@ $(document).ready(function() {
 			, Math.round(changetoHSL[2] * 100)
 		]
 				
-		console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
+		//console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#suppliment1').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
 		
@@ -84,7 +88,7 @@ $(document).ready(function() {
 			, Math.round(changetoHSL[2] * 100)
 		]
 				
-		console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
+		//console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#suppliment2').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
 	});
