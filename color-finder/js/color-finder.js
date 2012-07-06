@@ -28,6 +28,17 @@ $(document).ready(function() {
 		console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#compliment').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
+		var hexCom = [
+			hsl[0] / 360
+			,hsl[1] / 100
+			,hsl[2] / 100
+		
+		]
+		var trueHex = $.colors( 'hsla(hsl[0],hsl[1],hsl[2],1)' ).toString('hex');
+		console.log(trueHex);
+		console.log('hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2] + ')');
+		//'hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2])');
+		
 		//var changetoComHEX = hsL.color;
 		//console.log(changetoComHEX);
 		//$('#complimentary').val(changetoComHEX);
