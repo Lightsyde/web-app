@@ -32,5 +32,16 @@
 ### Concepts and tecniques learnt
 - I learnt how much using plugins can shorten the time needed to complete a programming project.
 - I became more familar with manipulating jQuery.
-- I learnt that using plugins can enable you to use coding and that would normally be unavailable to you
+- I learnt that using plugins can enable you to use coding and that would normally be unavailable to you.
+
+### Enjoyable parts
+ - The parts I found enjoyable were not specific. What I found enjoyable was when I finally  managed to
+	get something to work.
+
+### Fustrating parts
+- The fustrating parts were when I couldn't get a goal completed for long periods of time.
+
+### Radical Altering
+- Thankfully, I did not have to radically alter anything
+ 
  
