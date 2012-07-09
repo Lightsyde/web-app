@@ -1,3 +1,12 @@
+<?php
+
+require_once 'includes/dtb.php';
+
+?>
+
+
+
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -11,26 +20,35 @@
 	
 		<form>
 		
-		<label for="color">Color Code</label>
-		<input type="text" id="color" name="color" value="#123456">
-		<div id="colorpicker">
-		</div>
-		
-		<label for="complimentary">Complimentary</label>
-		<input type="text" id="complimentary" name="complimentary" >
-		<div id="compliment">
-		</div>
-		
-		<label for="supplimentary1">Supplementary1</label>
-		<input type="text" id="supplimentary1" name="supplimentary1" >
-		<div id="suppliment1">
-		</div>
-		
-		<label for="supplimentary2">Supplementary2</label>
-		<input type="text" id="supplimentary2" name="supplimentary2" >
-		<div id="suppliment2">
-		</div>
-		
+			<label for="color">Color Code</label>
+			<input type="text" id="color" name="color" value="#123456">
+			<div id="colorpicker">
+			</div>
+			
+			<label for="complimentary">Complimentary</label>
+			<input type="text" id="complimentary" name="complimentary" >
+			<div id="compliment">
+			</div>
+			
+			<label for="supplimentary1">Supplementary1</label>
+			<input type="text" id="supplimentary1" name="supplimentary1" >
+			<div id="suppliment1">
+			</div>
+			
+			<label for="supplimentary2">Supplementary2</label>
+			<input type="text" id="supplimentary2" name="supplimentary2" >
+			<div id="suppliment2">
+			</div>
+			
+			<div>
+				<div>	
+				<button>Save</button>
+				
+				<button>Load</button>
+				</div>
+				<div class="save-load">
+				</div>
+			</div>
 		</form>
 		
 	
