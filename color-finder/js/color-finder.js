@@ -39,7 +39,7 @@ $(document).ready(function() {
 		$('#compliment').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
 		
-		var utterComHex = $('#compliment').css('background-color').toString('hex');
+		var utterComHex = $.colors($('#compliment').css('background-color')).toString('hex');
 		$('#complimentary').val(utterComHex);
 		//var utterComHex = $('#compliment').val('hex');
 		//$('#complimentary').val(utterComHex); // find a way to link this...
@@ -90,7 +90,7 @@ $(document).ready(function() {
 		//console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#suppliment1').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
-		var utterSupHex = $('#suppliment1').css('background-color').toString('hex');
+		var utterSupHex = $.colors($('#suppliment1').css('background-color')).toString('hex');
 		$('#supplimentary1').val(utterSupHex);
 		
 		
@@ -110,7 +110,7 @@ $(document).ready(function() {
 		//console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#suppliment2').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
-		var utterSup2Hex = $('#suppliment2').css('background-color').toString('hex');
+		var utterSup2Hex = $.colors($('#suppliment2').css('background-color')).toString('hex');
 		$('#supplimentary2').val(utterSup2Hex);
 		
 	});
