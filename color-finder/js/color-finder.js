@@ -114,4 +114,8 @@ $(document).ready(function() {
 		$('#supplimentary2').val(utterSup2Hex);
 		
 	});
+	
+	$('#save-btn').on('click', function(ev) {
+		
+	});
 });
