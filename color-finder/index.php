@@ -22,7 +22,7 @@ require_once 'includes/dtb.php';
 
 	<body>
 	
-		<form>
+		<form method="post" action="index.php">
 		
 			<label for="color">Color Code</label>
 			<input type="text" id="color" name="color" value="#123456">
@@ -46,7 +46,7 @@ require_once 'includes/dtb.php';
 			
 			<div>
 				<div>	
-				<button id="save-btn">Save</button>
+				<button id="save-btn" type="submit">Save</button>
 					
 				
 				<button>Load</button>
@@ -54,18 +54,6 @@ require_once 'includes/dtb.php';
 				<div class="save-load">
 					<label for="name-save">Name</label>
 					<input type="text" id="name-save" name="name-save">
-					
-					<label for="base">Base color</label>
-					<input type="text" id="base" name="base">
-					
-					<label for="compliment-save">Complementary</label>
-					<input type="text" id="compliment-save" name="compliment-save">
-					
-					<label for="suppliment1-save">Supplementary 1</label>
-					<input type="text" id="suppliment1-save" name="suppliment1-save">
-					
-					<label for="suppliment2-save">Supplementary 2</label>
-					<input type="text" id="suppliment2-save" name="suppliment2-save">
 					
 				</div>
 			</div>

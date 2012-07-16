@@ -5,6 +5,7 @@
 
 
 $(document).ready(function() {
+		$('.save-load').hide();
 	$('#colorpicker').farbtastic(function (color) {
 		$('#color').val(color);
 		
@@ -35,7 +36,7 @@ $(document).ready(function() {
 		
 		
 		
-		console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
+		//console.log('hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		$('#compliment').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
 		
 		
@@ -43,7 +44,7 @@ $(document).ready(function() {
 		$('#complimentary').val(utterComHex);
 		//var utterComHex = $('#compliment').val('hex');
 		//$('#complimentary').val(utterComHex); // find a way to link this...
-		console.log (utterComHex);
+		//console.log (utterComHex);
 		
 		//var utterComHex = $.farbtastic('#colorpicker').$.farbtastic('#compliment',trueHex);
 		
@@ -113,9 +114,14 @@ $(document).ready(function() {
 		var utterSup2Hex = $.colors($('#suppliment2').css('background-color')).toString('hex');
 		$('#supplimentary2').val(utterSup2Hex);
 		
-	});
-	
-	$('#save-btn').on('click', function(ev) {
+		$('#save-btn').on('click', function(ev) {
+			
+			//ev.preventDefault();
+			$('.save-load').show();
+			
+		});
 		
 	});
+	
+	
 });
