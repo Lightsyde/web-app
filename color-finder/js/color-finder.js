@@ -1,11 +1,9 @@
 // JavaScript Document
 
-//change color value to hsl and store it in a variable
-//increment H in hsl by 0.5
-
+//remove invisibility of the name text field
 
 $(document).ready(function() {
-		$('.save-load').hide();
+		//$('.save-load').hide();
 	$('#colorpicker').farbtastic(function (color) {
 		$('#color').val(color);
 		
@@ -43,36 +41,13 @@ $(document).ready(function() {
 		var utterComHex = $.colors($('#compliment').css('background-color')).toString('hex');
 		$('#complimentary').val(utterComHex);
 		//var utterComHex = $('#compliment').val('hex');
-		//$('#complimentary').val(utterComHex); // find a way to link this...
-		//console.log (utterComHex);
-		
-		//var utterComHex = $.farbtastic('#colorpicker').$.farbtastic('#compliment',trueHex);
-		
-		//var utterComHex = $('#compliment').css('background-color', 'hsl(' + hsl[0] + ', ' + hsl[1] + '%, ' + hsl[2] + '%)');
-		//console.log(utterComHex);
-		//$('#complimentary').val(utterComHex.color);
-		
-		
-		/*var hexCom = [
-			hsl[0] / 360
-			,hsl[1] / 100
-			,hsl[2] / 100
-		
-		]*/
-		
-		//console.log(trueHexb);
-		
-		//$.farbtastic('#colorpicker')$.farbtastic('#complimentary',trueHex);
 		
 		
 		
-		//console.log('hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2] + ')');
-		//'hexCom(' + hexCom[0] + ', ' + hexCom[1] + ', ' + hexCom[2])');
 		
-		//var changetoComHEX = hsL.color;
-		//console.log(changetoComHEX);
-		//$('#complimentary').val(changetoComHEX);
-		//var comcolorValue = 
+		
+		
+		
 		
 		
 		//Supplementary one
@@ -114,12 +89,27 @@ $(document).ready(function() {
 		var utterSup2Hex = $.colors($('#suppliment2').css('background-color')).toString('hex');
 		$('#supplimentary2').val(utterSup2Hex);
 		
-		$('#save-btn').on('click', function(ev) {
-			
-			//ev.preventDefault();
-			$('.save-load').show();
-			
-		});
+		
+		
+		
+		
+		
+		
+		/*	$('#save-btn').on('click', function(ev) {
+				
+				ev.preventDefault();
+				//$('.save-load').show();
+				if ($('#name-save').val() == "") {
+					console.log('Woah!! is');
+					$('#errors').val("name your color selection!!");
+					
+					
+				}else {
+					
+					
+				};
+				
+			}); */
 		
 	});
 	
