@@ -44,26 +44,57 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 		
 		$sql = $db->prepare('
-			INSERT INTO color-store 
-			(name, base, complimentary, supplementary-1, supplementary-2)
+			INSERT INTO color_store 
+			(name, color, complimentary, supplementary1, supplementary2)
 			
 			VALUES 
 			(:name, :color, :complimentary, :supplimentary1, :supplimentary2)
 		
 		');
-		$sql->bindValue(':id', $id, PDO::PARAM_INT);
+	
 		$sql->bindValue(':color', $color, PDO::PARAM_STR);
 		$sql->bindValue(':name', $name, PDO::PARAM_STR);
 		$sql->bindValue(':complimentary', $complimentary, PDO::PARAM_STR);
 		$sql->bindValue(':supplimentary1', $supplimentary1, PDO::PARAM_STR);
 		$sql->bindValue(':supplimentary2', $supplimentary2, PDO::PARAM_STR);
 		$sql->execute();
-		
-		header('Location: index.php');
-		exit;
+		var_dump($sql->errorInfo());
+		//header('Location: index.php');
+		//exit;
 	}
 }
 
+if ($_SERVER['REQUEST_METHOD'] == "GET") {
+	if( $name == null || strlen($name) < 2) {
+		$errors['name'] = true;
+	
+	}
+	
+
+	if (empty($errors)) {
+		
+		
+		
+		$sql = $db->prepare('
+			SELECT 
+			name, color, complimentary, supplementary1, supplementary2
+			
+			FROM 
+			color_store 
+			
+			WHERE 
+			name = :name
+		
+		');
+		
+		
+		$sql->bindValue(':name', $name, PDO::PARAM_STR);
+		$results = $sql->fetchAll();
+		$sql->execute();
+		var_dump($sql->errorInfo());
+	}
+	
+}
 
 
 
@@ -108,9 +139,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<div>
 				<div>	
 				<button id="save-btn" type="submit">Save</button>
-					
-				
-				<button>Load</button>
 				</div>
 				<div class="save-load">
 					<label for="name">Name
@@ -125,6 +153,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<input type="text" id="errors" name="errors">
 					
 				</div>
+				
+			</div>
+		</form>
+		
+		<form method="get" action="index.php">
+			<button id="load-btn">Load</button>
+			<div class="load-load">
+				<label for="color">Color Code</label>
+				<input type="text" id="color" name="color" value="#123456">
+						
+				<label for="errors">Errors</label>
+				<input type="text" id="errors" name="errors">			
 			</div>
 		</form>
 		

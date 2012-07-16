@@ -3,7 +3,7 @@
 //remove invisibility of the name text field
 
 $(document).ready(function() {
-		//$('.save-load').hide();
+		$('.load-load').hide();
 	$('#colorpicker').farbtastic(function (color) {
 		$('#color').val(color);
 		
@@ -95,21 +95,13 @@ $(document).ready(function() {
 		
 		
 		
-		/*	$('#save-btn').on('click', function(ev) {
+			$('#load-btn').on('click', function(ev) {
 				
-				ev.preventDefault();
-				//$('.save-load').show();
-				if ($('#name-save').val() == "") {
-					console.log('Woah!! is');
-					$('#errors').val("name your color selection!!");
-					
-					
-				}else {
-					
-					
-				};
 				
-			}); */
+				$('.load-load').show();
+				
+				
+			}); 
 		
 	});
 	
