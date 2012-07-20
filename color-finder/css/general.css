@@ -2,8 +2,12 @@
 
 
 body {
+	
+	font-family:"Eras Medium ITC";
+	font-size:1.3em;
+	color:#FFFFFF;
 	background-color:c7c7c7;
-	width: 60em;
+	width: 50em;
 	min-height: 1122px;
 	margin: 0 auto;
 }
@@ -13,7 +17,7 @@ body {
 	border: 2em solid #8c8c8c;
 	padding: 32px;
 	min-height: 1000px;
-	background-color:#302e2e;
+	background-color:#242222;
 	
 	
 }
@@ -35,20 +39,26 @@ body {
 	
 }
 
-
-.load-load {
-	padding-top: 40em;
-	width: 17em;
-	height: 17em;
-	display: inline;
-	
-}
-
 .save-load {
-	margin-top: 20em;
+	margin-top: 210px;
 	width: 17em;
 	height: 17em;
 	display: block;
+}
+
+.load-load {
+	padding-top: 32px;
+	width: 17em;
+	
+	display: inline-block;
+	
+}
+
+
+
+input {
+	margin-top:14px;
+	margin-bottom:14px
 }
 
 input:invalid {
