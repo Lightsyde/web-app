@@ -72,10 +72,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		
 		if( $name == null || strlen($name) < 2) {
 			$errors['name'] = true;
-			var_dump($name);
+			
 	
 		}
 	}
+
+//Loading from the database!!
 
 	if(isset($_POST['loading'])) {
 			//if (empty($errors)) {
@@ -112,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 
-//Loading from the database!!
+
 
 
 
@@ -133,29 +135,29 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	</head>
 
 	<body>
-	
+		<div id="divtotal">
 		<form method="post" action="index.php">
 			
 			<input type="hidden" value="saving" name="saving">
 			
 			<label for="color">Color Code</label>
 			<input type="text" id="color" name="color" value="#123456">
-			<div id="colorpicker">
+			<div id="colorpicker" class="colorbox">
 			</div>
 			
 			<label for="complimentary">Complimentary</label>
 			<input type="text" id="complimentary" name="complimentary" >
-			<div id="compliment">
+			<div id="compliment" class="colorbox">
 			</div>
 			
 			<label for="supplimentary1">Supplementary1</label>
 			<input type="text" id="supplimentary1" name="supplimentary1" >
-			<div id="suppliment1">
+			<div id="suppliment1" class="colorbox">
 			</div>
 			
 			<label for="supplimentary2">Supplementary2</label>
 			<input type="text" id="supplimentary2" name="supplimentary2" >
-			<div id="suppliment2">
+			<div id="suppliment2" class="colorbox">
 			</div>
 			
 			<div>
@@ -222,5 +224,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				
 			});
 		</script>
+		</div>
 	</body>
 </html>
