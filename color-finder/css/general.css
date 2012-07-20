@@ -45,10 +45,10 @@ body {
 }
 
 .save-load {
-	margin-top: 40em;
+	margin-top: 20em;
 	width: 17em;
 	height: 17em;
-	display: inline;
+	display: block;
 }
 
 input:invalid {
