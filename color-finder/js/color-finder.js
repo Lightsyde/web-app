@@ -3,7 +3,7 @@
 //remove invisibility of the name text field
 
 $(document).ready(function() {
-		$('.load-load').hide();
+		//$('.load-load').hide();
 	$('#colorpicker').farbtastic(function (color) {
 		$('#color').val(color);
 		

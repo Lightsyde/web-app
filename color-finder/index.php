@@ -1,6 +1,7 @@
 <?php
 
 require_once 'includes/dtb.php';
+//require_once 'load.php';
 
 $errors = array();
 
@@ -11,95 +12,109 @@ $complimentary = filter_input(INPUT_POST, 'complimentary', FILTER_UNSAFE_RAW);
 $supplimentary1 = filter_input(INPUT_POST, 'supplimentary1', FILTER_UNSAFE_RAW);
 $supplimentary2 = filter_input(INPUT_POST, 'supplimentary2', FILTER_UNSAFE_RAW);
 
-//echo($name);
+
+$load = filter_input(INPUT_POST, 'load', FILTER_SANITIZE_STRING);
+var_dump($_POST);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
-	if( $name == null || strlen($name) < 2) {
-		$errors['name'] = true;
+	if(isset($_POST['saving'])) {
+		
+		if( $name == null || strlen($name) < 2) {
+			$errors['name'] = true;
 	
-	}
+		}
 	
-	if(strlen($color) != 7) {
-		$errors['color'] = true;
-	}
+		if(strlen($color) != 7) {
+			$errors['color'] = true;
+		}
 	
-	if(strlen($complimentary) != 7) {
-		$errors['complimentary'] = true;
-	}
-	
-	
-	if(strlen($supplimentary1) != 7) {
-		$errors['$supplimentary1'] = true;
-	}
+		if(strlen($complimentary) != 7) {
+			$errors['complimentary'] = true;
+		}
 	
 	
-	if(strlen($supplimentary2) != 7) {
-		$errors['supplimentary2'] = true;
-	}
+		if(strlen($supplimentary1) != 7) {
+			$errors['$supplimentary1'] = true;
+		}
+	
+	
+		if(strlen($supplimentary2) != 7) {
+			$errors['supplimentary2'] = true;
+		}	
 	
 	
 	
 
-	if (empty($errors)) {
+		if (empty($errors)) {
 		
 		
 		
-		$sql = $db->prepare('
-			INSERT INTO color_store 
-			(name, color, complimentary, supplementary1, supplementary2)
+			$sql = $db->prepare('
+				INSERT INTO color_store 
+				(name, color, complimentary, supplementary1, supplementary2)
 			
-			VALUES 
-			(:name, :color, :complimentary, :supplimentary1, :supplimentary2)
+				VALUES 
+				(:name, :color, :complimentary, :supplimentary1, :supplimentary2)
 		
-		');
+			');
 	
-		$sql->bindValue(':color', $color, PDO::PARAM_STR);
-		$sql->bindValue(':name', $name, PDO::PARAM_STR);
-		$sql->bindValue(':complimentary', $complimentary, PDO::PARAM_STR);
-		$sql->bindValue(':supplimentary1', $supplimentary1, PDO::PARAM_STR);
-		$sql->bindValue(':supplimentary2', $supplimentary2, PDO::PARAM_STR);
-		$sql->execute();
-		var_dump($sql->errorInfo());
+			$sql->bindValue(':color', $color, PDO::PARAM_STR);
+			$sql->bindValue(':name', $name, PDO::PARAM_STR);
+			$sql->bindValue(':complimentary', $complimentary, PDO::PARAM_STR);
+			$sql->bindValue(':supplimentary1', $supplimentary1, PDO::PARAM_STR);
+			$sql->bindValue(':supplimentary2', $supplimentary2, PDO::PARAM_STR);
+			$sql->execute();
+			var_dump($sql->errorInfo());
 		//header('Location: index.php');
 		//exit;
+		}
+		//loading aspect
+		
+		if( $name == null || strlen($name) < 2) {
+			$errors['name'] = true;
+			var_dump($name);
+	
+		}
 	}
+
+	if(isset($_POST['loading'])) {
+			//if (empty($errors)) {
+	
+		
+			$sql = $db->prepare('
+				SELECT 
+				name, color, complimentary, supplementary1, supplementary2
+			
+				FROM 
+				color_store 
+				
+				WHERE 
+				name = :load
+		
+			');
+		
+		
+			$sql->bindValue(':load',$load, PDO::PARAM_STR);
+			$sql->execute();
+			$results = $sql->fetch();
+			
+			//var_dump($sql->errorInfo());
+			var_dump($results);
+			
+		//}
+	
+		
+//	}
+		
+	}
+	
+	
 }
 
 
 //Loading from the database!!
 
-if ($_SERVER['REQUEST_METHOD'] == "GET") {
-	if( $name == null || strlen($name) < 2) {
-		$errors['name'] = true;
-		var_dump($name);
-	
-	}
-	
 
-	if (empty($errors)) {
-		
-		
-		
-		$sql = $db->prepare('
-			SELECT 
-			name, color, complimentary, supplementary1, supplementary2
-			
-			FROM 
-			color_store 
-			
-			WHERE 
-			name = :name
-		
-		');
-		
-		
-		$sql->bindValue(':name', $name, PDO::PARAM_STR);
-		$results = $sql->fetchAll();
-		$sql->execute();
-		var_dump($sql->errorInfo());
-	}
-	
-}
 
 
 
@@ -120,7 +135,9 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 	<body>
 	
 		<form method="post" action="index.php">
-		
+			
+			<input type="hidden" value="saving" name="saving">
+			
 			<label for="color">Color Code</label>
 			<input type="text" id="color" name="color" value="#123456">
 			<div id="colorpicker">
@@ -163,14 +180,29 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 		</form>
 		
 		<form method="post" action="index.php">
+			
+			<input type="hidden" value="loading" name="loading">
+			
 			<button id="load-btn" type="submit">Load</button>
 			
+			
+			<label for="load">Selection to Load</label>
+			<input type="text" id="load" name="load">	
+				
 			<div class="load-load">
-				<label for="color">Color Code</label>
-				<input type="text" id="color" name="color" value="#123456">
+				<label for="getcolor">Base Color</label>
+				<input type="text" id="getcolor" name="getcolor" value="<?php if(isset($results)) {echo $results['color'];}?>">
 						
-				<label for="errors">Errors</label>
-				<input type="text" id="errors" name="errors">			
+				<label for="getcomp">Complimentary</label>
+				<input type="text" id="getcomp" name="getcomp" value="<?php if(isset($results)) {echo $results['complimentary'];}?>">	
+				
+				<label for="getsup">Supplimentary</label>
+				<input type="text" id="getsup" name="getsup" value="<?php if(isset($results)) {echo $results['supplementary1'];}?>">			
+				
+				<label for="getsup2">Complimentary</label>
+				<input type="text" id="getsup2" name="getsup2" value="<?php if(isset($results)) {echo $results['supplementary2'];}?>">			
+				
+						
 			</div>
 		</form>
 		
