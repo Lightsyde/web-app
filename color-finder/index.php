@@ -11,6 +11,7 @@ $complimentary = filter_input(INPUT_POST, 'complimentary', FILTER_UNSAFE_RAW);
 $supplimentary1 = filter_input(INPUT_POST, 'supplimentary1', FILTER_UNSAFE_RAW);
 $supplimentary2 = filter_input(INPUT_POST, 'supplimentary2', FILTER_UNSAFE_RAW);
 
+//echo($name);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if( $name == null || strlen($name) < 2) {
@@ -64,9 +65,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 }
 
+
+//Loading from the database!!
+
 if ($_SERVER['REQUEST_METHOD'] == "GET") {
 	if( $name == null || strlen($name) < 2) {
 		$errors['name'] = true;
+		var_dump($name);
 	
 	}
 	
@@ -141,12 +146,12 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 				<button id="save-btn" type="submit">Save</button>
 				</div>
 				<div class="save-load">
-					<label for="name">Name
+					<label for="name">Selection Name
 						<?php if (isset ($errors['name'])) : ?>
 							<strong class="error">is required</strong>
 						<?php endif ?>
-					
 					</label>
+					
 					<input type="text" id="name" name="name">
 					
 					<label for="errors">Errors</label>
@@ -157,8 +162,9 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 			</div>
 		</form>
 		
-		<form method="get" action="index.php">
-			<button id="load-btn">Load</button>
+		<form method="post" action="index.php">
+			<button id="load-btn" type="submit">Load</button>
+			
 			<div class="load-load">
 				<label for="color">Color Code</label>
 				<input type="text" id="color" name="color" value="#123456">
