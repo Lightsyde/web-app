@@ -14,7 +14,7 @@ $supplimentary2 = filter_input(INPUT_POST, 'supplimentary2', FILTER_UNSAFE_RAW);
 
 
 $load = filter_input(INPUT_POST, 'load', FILTER_SANITIZE_STRING);
-var_dump($_POST);
+//var_dump($_POST);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	if(isset($_POST['saving'])) {
@@ -184,8 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 						
 						<input type="text" id="name" name="name">
 						
-						<label for="errors">Errors</label>
-						<input type="text" id="errors" name="errors">
+						
 						
 					</div>
 					

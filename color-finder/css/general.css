@@ -50,7 +50,7 @@ body {
 	padding-top: 32px;
 	width: 17em;
 	
-	display: inline-block;
+	display: inline;
 	
 }
 
@@ -58,7 +58,7 @@ body {
 
 input {
 	margin-top:14px;
-	margin-bottom:14px
+	margin-bottom:14px;
 }
 
 input:invalid {
