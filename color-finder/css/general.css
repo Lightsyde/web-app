@@ -3,44 +3,66 @@
 
 body {
 	background-color:c7c7c7;
-	width: 70em;
+	width: 60em;
+	min-height: 1122px;
 	margin: 0 auto;
 }
 
 #divtotal {
 	
-	border: 7em solid #8c8c8c;
+	border: 2em solid #8c8c8c;
 	padding: 32px;
+	min-height: 1000px;
+	background-color:#302e2e;
+	
+	
 }
 .colorbox {
 	background-color: #6b5858;	
 	border:2em solid d9cccc;
-	padding: 16px;
+	
 	width: 200px;
 	height: 200px;
 	margin: 32px;
-	
-	
 }
-/*
-#colorpicker {
+
+.contain {
+	width: 17em;
+	height: 17em;
+	
+	margin: 2em;
+	display: inline-block;
 	
 }
 
-/* CSS Document */
-/*
-#compliment{
-	width: 7em;
-	height: 7em;
+
+.load-load {
+	padding-top: 40em;
+	width: 17em;
+	height: 17em;
+	display: inline;
+	
 }
 
-#suppliment1 {
-	width: 7em;
-	height: 7em;
+.save-load {
+	margin-top: 40em;
+	width: 17em;
+	height: 17em;
+	display: inline;
 }
 
-#suppliment2 {
-	width: 7em;
-	height: 7em;
+input:invalid {
+	color:#FF0000;
 }
-*/
+
+input:valid {
+	background-color: #dbdbdb;
+	color: #030;	
+}
+
+input:focus {
+	
+	background-color: #f7f7e4;
+	box-shadow: 1px 1px 3px rgba(0,153,51, 0.4);
+	
+}
