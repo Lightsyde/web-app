@@ -143,13 +143,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				
 				<div class="contain">
 					<label for="color">Color Code</label>
-					<input type="text" id="color" name="color" value="#123456">
+					<input type="text" id="color" name="color" value="<?php if(isset($results)) {echo $results['color'];}?>">
 					
 					<div id="colorpicker" class="colorbox">
 					</div>
 					
 					<label for="complimentary">Complimentary</label>
-					<input type="text" id="complimentary" name="complimentary" >
+					<input type="text" id="complimentary" name="complimentary" value="<?php if(isset($results)) {echo $results['complimentary'];}?>">
 					<div id="compliment" class="colorbox">
 					</div>
 				</div>
@@ -157,12 +157,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				
 				<div class="contain">
 					<label for="supplimentary1">Supplementary1</label>
-					<input type="text" id="supplimentary1" name="supplimentary1" >
+					<input type="text" id="supplimentary1" name="supplimentary1" value="<?php if(isset($results)) {echo $results['supplementary1'];}?>">
 					<div id="suppliment1" class="colorbox">
 					</div>
 					
 					<label for="supplimentary2">Supplementary2</label>
-					<input type="text" id="supplimentary2" name="supplimentary2" >
+					<input type="text" id="supplimentary2" name="supplimentary2" value="<?php if(isset($results)) {echo $results['supplementary2'];}?>">
 					<div id="suppliment2" class="colorbox">
 					</div>
 				</div>

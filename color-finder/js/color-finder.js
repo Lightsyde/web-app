@@ -95,7 +95,11 @@ $(document).ready(function() {
 		
 		
 		
-			$('#load-btn').on('click', function(ev) {
+			
+		
+	});
+	
+	$('#load-btn').on('click', function(ev) {
 				
 				
 				$('.load-load').show();
@@ -108,8 +112,4 @@ $(document).ready(function() {
 				$('#color').val(colorChange);
 				
 			});*/
-		
-	});
-	
-	
 });
