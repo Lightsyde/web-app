@@ -211,10 +211,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 					<label for="getcomp">Complimentary</label>
 					<input type="text" id="getcomp" name="getcomp" value="<?php if(isset($results)) {echo $results['complimentary'];}?>">	
 					
-					<label for="getsup">Supplimentary</label>
+					<label for="getsup">Supplementary1</label>
 					<input type="text" id="getsup" name="getsup" value="<?php if(isset($results)) {echo $results['supplementary1'];}?>">			
 					
-					<label for="getsup2">Complimentary</label>
+					<label for="getsup2">Supplementary2</label>
 					<input type="text" id="getsup2" name="getsup2" value="<?php if(isset($results)) {echo $results['supplementary2'];}?>">			
 					
 							

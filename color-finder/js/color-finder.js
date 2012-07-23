@@ -99,9 +99,15 @@ $(document).ready(function() {
 				
 				
 				$('.load-load').show();
-				
+				var colorChange = $('#getcolor').val();
+				$('#color').val(colorChange);
 				
 			}); 
+			/*$('#color').on('change', function() {
+				var colorChange = $('#color').val();
+				$('#color').val(colorChange);
+				
+			});*/
 		
 	});
 	
