@@ -1,4 +1,4 @@
-# Color Finder Progress Report 1
+# Color Finder Progress Report 2
 
 ### Goals for previous week
 - Create a save and load button (Successfully Completed)
@@ -16,6 +16,8 @@
 - Display loaded colors in color picker
 
 - create div box displaying base color
+
+- Enhance css
 
 ### Concepts and tecniques learnt
 - I learnt how to make two post requests on a single php page.
