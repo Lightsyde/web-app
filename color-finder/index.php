@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$sql->bindValue(':supplimentary1', $supplimentary1, PDO::PARAM_STR);
 			$sql->bindValue(':supplimentary2', $supplimentary2, PDO::PARAM_STR);
 			$sql->execute();
-			var_dump($sql->errorInfo());
+			//var_dump($sql->errorInfo());
 		//header('Location: index.php');
 		//exit;
 		}
@@ -135,6 +135,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	</head>
 
 	<body>
+		<div id="cover">		
+			
+
 		<div id="divtotal">
 			<form method="post" action="index.php">
 				
@@ -240,5 +243,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				});
 			</script>
 		</div>
+	</div>
 	</body>
 </html>

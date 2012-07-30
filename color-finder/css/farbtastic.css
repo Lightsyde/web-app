@@ -18,6 +18,8 @@
  */
 .farbtastic {
   position: relative;
+  z-index: 7000;
+  
 }
 .farbtastic * {
   position: absolute;
@@ -47,5 +49,6 @@
   margin: -8px 0 0 -8px;
   overflow: hidden; 
   background: url(../images/marker.png) no-repeat;
+  
 }
 

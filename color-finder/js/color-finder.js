@@ -51,17 +51,14 @@ $(document).ready(function() {
 	
 		$('#colorpicker').css('background-color', origin);
 		
-		//var baseHex = $('#color').val(color);
-		//$('#colorpicker').val(baseHex);
-		
-		//console.log(baseHex);
 		
 		
-		$('#color').on('change', function() {
+		
+		/*$('#color').on('change', function() {
 				var colorChange = $('#color').val();
 				$('#color').setColor(colorChange);
 				
-			});
+			});*/
 			
 			//console.log(colorChange);*/
 		

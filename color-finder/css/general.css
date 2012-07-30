@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+html{
+	background-color: #666;
+}
 
 body {
 	
@@ -7,17 +10,27 @@ body {
 	font-size:1.3em;
 	color:#FFFFFF;
 	background-color:c7c7c7;
-	width: 50em;
-	min-height: 1122px;
+	background-image:url('../images/main-background.png');
+	
+	background-size:cover;
+	max-width: 70%;
+	min-height: 1100px;
 	margin: 0 auto;
 }
 
+#cover {
+	background-color: rgba(0,0,0,0.6);	
+}
+
 #divtotal {
-	
+	/*position: relative;*/
 	border: 2em solid #8c8c8c;
 	padding: 32px;
+	width: 63%;
+	margin: 0 auto;
 	min-height: 1000px;
-	background-color:#242222;
+	background-color: rgba(0,0,0, 0.7);
+	z-index:1000;
 	
 	
 }
@@ -28,6 +41,7 @@ body {
 	width: 200px;
 	height: 200px;
 	margin: 32px;
+	
 }
 
 .contain {
@@ -36,6 +50,7 @@ body {
 	
 	margin: 2em;
 	display: inline-block;
+	z-index:5000;
 	
 }
 
