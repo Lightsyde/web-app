@@ -96,9 +96,9 @@ $(document).ready(function() {
 		
 		//Supplementary one
 		if (hue < .5) {
-			compliment = hue + .04;
+			compliment = hue + .05;
 		}else{
-			compliment = hue - .04;
+			compliment = hue - .05;
 		}
 		
 		var hsl = [
