@@ -135,114 +135,107 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	</head>
 
 	<body>
+		
 		<div id="cover">		
 			
-
-		<div id="divtotal">
-			<form method="post" action="index.php">
-				
-				<input type="hidden" value="saving" name="saving">
-				
-				
-				<div class="contain">
-					<label for="color">Color Code</label>
-					<input type="text" id="color" name="color" value="<?php if(isset($results)) {echo $results['color'];}?>">
-					
-					<div id="colorpicker" class="colorbox">
-					</div>
-					
-					<label for="complimentary">Complimentary</label>
-					<input type="text" id="complimentary" name="complimentary" value="<?php if(isset($results)) {echo $results['complimentary'];}?>">
-					<div id="compliment" class="colorbox">
-					</div>
-				</div>
-				
-				
-				<div class="contain">
-					<label for="supplimentary1">Supplementary1</label>
-					<input type="text" id="supplimentary1" name="supplimentary1" value="<?php if(isset($results)) {echo $results['supplementary1'];}?>">
-					<div id="suppliment1" class="colorbox">
-					</div>
-					
-					<label for="supplimentary2">Supplementary2</label>
-					<input type="text" id="supplimentary2" name="supplimentary2" value="<?php if(isset($results)) {echo $results['supplementary2'];}?>">
-					<div id="suppliment2" class="colorbox">
-					</div>
-				</div>
-				
-				
-				
-			 <div>
-					<!--<div>	
-					
-					</div> -->
-					<div class="save-load">
-					 <button id="save-btn" type="submit">Save</button>
-					
-						<label for="name">Selection Name
-							<?php if (isset ($errors['name'])) : ?>
-								<strong class="error">is required</strong>
-							<?php endif ?>
-						</label>
-						
-						<input type="text" id="name" name="name">
-						
-						
-						
-					</div>
-					
-				</div>
-			</form>
 			
-			<form method="post" action="index.php">
-				
-				<input type="hidden" value="loading" name="loading">
-				
-				
-					
-				<div class="load-load">
-				<button id="load-btn" type="submit">Load</button>
-				
-				
-				<label for="load">Selection to Load</label>
-				<input type="text" id="load" name="load">	
-				
-				
-					<label for="getcolor">Base Color</label>
-					<input type="text" id="getcolor" name="getcolor" value="<?php if(isset($results)) {echo $results['color'];}?>">
-							
-					<label for="getcomp">Complimentary</label>
-					<input type="text" id="getcomp" name="getcomp" value="<?php if(isset($results)) {echo $results['complimentary'];}?>">	
-					
-					<label for="getsup">Supplementary1</label>
-					<input type="text" id="getsup" name="getsup" value="<?php if(isset($results)) {echo $results['supplementary1'];}?>">			
-					
-					<label for="getsup2">Supplementary2</label>
-					<input type="text" id="getsup2" name="getsup2" value="<?php if(isset($results)) {echo $results['supplementary2'];}?>">			
-					
-							
-				</div>
-				
-			
-			</form>
-			
-
 		
-			
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-			
-			
-			<script src="js/jquery.colors.bundle.min.js"></script>
-			<script src="js/farbtastic.js">
+			<div id="divtotal">
 				
-			</script>
-			<script src="js/color-finder.js">
-				$(document).ready(function() {
-					$('#colorpicker').farbtastic('#color');
+				<form method="post" action="index.php">
 					
-				});
-			</script>
+					<input type="hidden" value="saving" name="saving">
+					
+					<div id="title">
+						
+					</div>
+					<div class="contain">
+						<label for="color">Color Code</label>
+						<input type="text" id="color" name="color" value="<?php if(isset($results)) {echo $results['color'];}?>">
+						
+						<div id="colorpicker" class="colorbox">
+						</div>
+						
+						<label for="complimentary">Complimentary</label>
+						<input type="text" id="complimentary" name="complimentary" value="<?php if(isset($results)) {echo $results['complimentary'];}?>">
+						<div id="compliment" class="colorbox">
+						</div>
+					</div>
+					
+					
+					<div class="contain">
+						<label for="supplimentary1">Supplementary1</label>
+						<input type="text" id="supplimentary1" name="supplimentary1" value="<?php if(isset($results)) {echo $results['supplementary1'];}?>">
+						<div id="suppliment1" class="colorbox">
+						</div>
+						
+						<label for="supplimentary2">Supplementary2</label>
+						<input type="text" id="supplimentary2" name="supplimentary2" value="<?php if(isset($results)) {echo $results['supplementary2'];}?>">
+						<div id="suppliment2" class="colorbox">
+						</div>
+					</div>
+					
+					
+					
+				 
+						<!--<div>	
+						
+						</div> -->
+						<div class="save-load">
+						 <button id="save-btn" type="submit">Save</button>
+						
+							<label for="name">Selection Name
+								<?php if (isset ($errors['name'])) : ?>
+									<strong class="error">is required</strong>
+								<?php endif ?>
+							</label>
+							
+							<input type="text" id="name" name="name">
+							
+							
+							
+						</div>
+						
+					
+				</form>
+				
+				<form method="post" action="index.php">
+					
+					<input type="hidden" value="loading" name="loading">
+					
+					
+						
+					<div class="load-load">
+					<button id="load-btn" type="submit">Load</button>
+					
+					
+					<label for="load">Selection to Load</label>
+					<input type="text" id="load" name="load">	
+					
+					
+								
+					</div>
+					
+				
+				</form>
+				
+	
+			
+				
+				<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+				
+				
+				<script src="js/jquery.colors.bundle.min.js"></script>
+				<script src="js/farbtastic.js">
+					
+				</script>
+				<script src="js/color-finder.js">
+					$(document).ready(function() {
+						$('#colorpicker').farbtastic('#color');
+						
+					});
+				</script>
+			</div>
 		</div>
-	</div>
 	</body>
 </html>

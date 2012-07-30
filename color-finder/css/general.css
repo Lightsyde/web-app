@@ -5,7 +5,7 @@ html{
 }
 
 body {
-	
+	margin: 0 auto;
 	font-family:"Eras Medium ITC";
 	font-size:1.3em;
 	color:#FFFFFF;
@@ -14,26 +14,43 @@ body {
 	
 	background-size:cover;
 	max-width: 70%;
-	min-height: 1100px;
-	margin: 0 auto;
+	min-height: 900px;
+	
 }
 
 #cover {
 	background-color: rgba(0,0,0,0.6);	
 }
 
+
 #divtotal {
 	/*position: relative;*/
+	margin: 0 auto;
+	
 	border: 2em solid #8c8c8c;
 	padding: 32px;
-	width: 63%;
-	margin: 0 auto;
-	min-height: 1000px;
+	width: 49%;
+	
+	min-height: 900px;
 	background-color: rgba(0,0,0, 0.7);
 	z-index:1000;
 	
 	
+	
+	
 }
+/*form {
+	max-width: 60em;
+}*/
+
+#title {
+	margin: 0 auto;
+	background: transparent url('../images/title.png') no-repeat top center;
+	height: 70px;
+	width: 400px;
+}
+
+
 .colorbox {
 	background-color: #6b5858;	
 	border:2em solid d9cccc;
@@ -45,10 +62,12 @@ body {
 }
 
 .contain {
-	width: 17em;
+	margin: 2em auto;
+	width: 35%;
 	height: 17em;
 	
-	margin: 2em;
+	
+	padding:1em;
 	display: inline-block;
 	z-index:5000;
 	
@@ -57,7 +76,7 @@ body {
 .save-load {
 	margin-top: 210px;
 	width: 17em;
-	height: 17em;
+	height: 10em;
 	display: block;
 }
 
