@@ -33,6 +33,9 @@ $(document).ready(function() {
 		$('#compliment').css('background-color', commed);
 		
 	
+	var origin = $('#color').val();
+	
+		$('#colorpicker').css('background-color', origin);
 			//loading ends
 			
 			
@@ -44,7 +47,9 @@ $(document).ready(function() {
 		
 		$('#color').val(color);
 		
-		
+		var origin = $('#color').val();
+	
+		$('#colorpicker').css('background-color', origin);
 		
 		//var baseHex = $('#color').val(color);
 		//$('#colorpicker').val(baseHex);
