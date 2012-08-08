@@ -15,7 +15,7 @@ of your selected colors will be shown changing in their respective boxes.
 Your selection will show in the color boxes. Thank you.
 
 
-link http://test-color-app.phpfogapp.com/color-finder/
+
 
  - To install colorfinder, download the files, install wamp or mamp, put all the files into the htdocs folder in mac or the
 www folder in windows. open the files in dreamweaver and preview them in localhost.
