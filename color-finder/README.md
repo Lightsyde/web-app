@@ -52,10 +52,10 @@ intended as an aid to web and graphic design, as well as digital art.
 ______________________________________
 Authors name: Titar Awua-Imande
 
-Urls:  http://test-color-app.phpfogapp.com/color-finder/
-	http://lightsyde.deviantart.com/
-	https://github.com/Lightsyde/web-app/tree/master/color-finder
-
+Urls:  
+[Color Finder Working version] (http://test-color-app.phpfogapp.com/color-finder/)
+[One of my sites] (http://lightsyde.deviantart.com/)
+[Color Finder on Github - developement version] (https://github.com/Lightsyde/web-app/tree/master/color-finder)
 emails: taimande@gmail.com
 -------------------------------
 
@@ -79,7 +79,7 @@ _______________________
 ### Link to functional version
 ___________________________________
 
- http://test-color-app.phpfogapp.com/color-finder/
+[Color Finder Working version] (http://test-color-app.phpfogapp.com/color-finder/)
 
 
 
