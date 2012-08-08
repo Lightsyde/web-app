@@ -1,5 +1,14 @@
 <?php
-
+/**
+ *Small description of this file:
+ *Lists all the dinosaurs in the database
+ *
+ *@author Lightsyde (Titar Awua-Imande) <taimande@gmail.com>
+ *@copyright 2012 Titar Awua Imande
+ *@licence BSD-3-Clause <http://github.com/..../licence.txt>
+ *@version 1.0.0
+ *@package Dinosaurs\Controllers
+*/
 require_once 'includes/dtb.php';
 //require_once 'load.php';
 
