@@ -19,6 +19,8 @@
 
 - Finish up licensing
 
+- Successfully upload to phpfog.
+
 ### Concepts and tecniques learnt
 - I learnt more about z-index.
 - I became more familar with manipulating jQuery.
