@@ -53,10 +53,10 @@ ______________________________________
 Authors name: Titar Awua-Imande
 
 Urls:  
-[Color Finder Working version] (http://test-color-app.phpfogapp.com/color-finder/)
-[One of my sites] (http://lightsyde.deviantart.com/)
-[Color Finder on Github - developement version] (https://github.com/Lightsyde/web-app/tree/master/color-finder)
-emails: taimande@gmail.com
+- [Color Finder Working version] (http://test-color-app.phpfogapp.com/color-finder/)
+- [One of my sites] (http://lightsyde.deviantart.com/)
+- [Color Finder on Github - developement version] (https://github.com/Lightsyde/web-app/tree/master/color-finder)
+- emails: taimande@gmail.com
 -------------------------------
 
 
