@@ -14,6 +14,9 @@ of your selected colors will be shown changing in their respective boxes.
 - When you want to load your selection again, just enter the name you saved in the load bar, then click the load button.
 Your selection will show in the color boxes. Thank you.
 
+
+link http://test-color-app.phpfogapp.com/color-finder/
+
 --------
 
 
