@@ -17,6 +17,9 @@ Your selection will show in the color boxes. Thank you.
 
 link http://test-color-app.phpfogapp.com/color-finder/
 
+ - To install colorfinder, download the files, install wamp or mamp, put all the files into the htdocs folder in mac or the
+www folder in windows. open the files in dreamweaver and preview them in localhost.
+
 --------
 
 
@@ -37,10 +40,45 @@ Compatible with firefox 5.0.1
 Features, Brief Description
 _________________________
 
-Color Finder is a web
+Color Finder is a web app that lets you select colors in a selection consisting of base colors, and the complimentary
+and supplementary values of those colors including a flexibility in increasing and decreasing light and saturation. It is 
+intended as an aid to web and graphic design, as well as digital art.
 
 --------------------------
 
+
+
+Authors name, urls, emails.
+______________________________________
+Authors name: Titar Awua-Imande
+
+Urls:  http://test-color-app.phpfogapp.com/color-finder/
+	http://lightsyde.deviantart.com/
+
+emails: taimande@gmail.com
+-------------------------------
+
+
+
+
+Name of Project
+___________________________
+MTM_1531 final project
+-------------------------
+
+
+
+
+Date Created
+_______________________
+17th, August, 2012
+----------------------
+
+
+Link to functional version
+___________________________________
+
+ http://test-color-app.phpfogapp.com/color-finder/
 
 
 
