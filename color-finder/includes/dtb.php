@@ -1,13 +1,13 @@
 <?php
 /**
- *Small description of this file: This is the file that enables a connection to the color-finder database
- *Lists all the dinosaurs in the database
+ * This is the file that enables a connection to the color-finder database
+
  *
  *@author Lightsyde (Titar Awua-Imande) <taimande@gmail.com>
  *@copyright 2012 Titar Awua Imande
- *@licence BSD-3-Clause <http://github.com/..../licence.txt>
+ *@licence BSD-3-Clause <https://github.com/Lightsyde/web-app/blob/master/color-finder/licence.txt>
  *@version 1.0.0
- *@package Dinosaurs\Controllers
+ *@package Color Finder
 */
 
 $user = getenv('MYSQL_USERNAME');

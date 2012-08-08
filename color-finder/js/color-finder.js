@@ -1,14 +1,14 @@
 // JavaScript Document
 
 /**
- *Small description of this file:
- *Lists all the dinosaurs in the database
+ *This file controlls the primary interactivity functions of the color-web app
+
  *
  *@author Lightsyde (Titar Awua-Imande) <taimande@gmail.com>
  *@copyright 2012 Titar Awua Imande
- *@licence BSD-3-Clause <http://github.com/..../licence.txt>
+ *@licence BSD-3-Clause <https://github.com/Lightsyde/web-app/blob/master/color-finder/licence.txt>
  *@version 1.0.0
- *@package Dinosaurs\Controllers
+ *@package Color Finder
 */
 
 //remove invisibility of the name text field
