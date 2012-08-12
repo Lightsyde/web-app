@@ -24,7 +24,7 @@ body {
 	
 	background-size:cover;
 	max-width: 70%;
-	min-height: 900px;
+	min-height: 800px;
 	
 }
 
@@ -84,7 +84,7 @@ body {
 }
 
 .save-load {
-	margin-top: 210px;
+	margin-top: 220px;
 	width: 17em;
 	height: 10em;
 	display: block;
